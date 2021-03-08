@@ -1,0 +1,216 @@
+/* Imported Font Family from google fonts => Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/* Root */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Oswald', sans-serif;
+overflow: hidden !important;
+}
+/* Body */
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #131313;
+}
+/* CONTAINER */
+.container{
+position: relative;
+animation: fadeIn 1.5s;
+}
+/* CONTAINER - ANIMATION */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+/* CARD */
+.container .card{
+position: relative;
+width: 320px;
+height: 555px;
+background-color: #232323;
+border-radius: 20px;
+overflow: hidden;
+}
+
+/* BEFORE */
+.container .card::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #ffbe00;
+clip-path: circle(222px at 90% 17%);
+transition: 0.5s ease-in-out;
+}
+.container .card:hover:before{
+clip-path: circle(222px at 50% 0%);
+}
+.container .card:after{
+content: 'Nike Air';
+position: absolute;
+top: 30%;
+left: 9%;
+font-size: 5rem;
+font-weight: normal;
+text-transform: uppercase;
+color: white;
+transition: 0.5s;
+}
+/* IMGBOX */
+.container .card .imgBx{
+position: absolute;
+top: 45%;
+transform: translateY(-50%);
+width: 100%;
+z-index: 1000;
+height: 220px;
+transition: 0.5s;
+}
+.container .card:hover .imgBx{
+top: 5%;
+transform: translateY(0%);
+}
+.container .card:hover::after{
+top: 5%;
+transform: translateY(0%);
+}
+/* IMAGE  */
+.container .card .imgBx img{
+position: absolute;
+top: 48%;
+left: 48%;
+transform: translate(-60%, -60%) rotate(-25deg);
+width: 300px;
+filter: drop-shadow(0 4px 4px rgba(39,39,39,0.8));
+}
+/* CONTENTBOX */
+.container .card .contentBx{
+position: absolute;
+bottom: 2.5%;
+width: 100%;
+height: 100px; 
+z-index: 10;
+padding: 1.2rem;
+transition: 0.5s;
+}
+.container .card .contentBx:hover{
+height: 290px;
+}
+.container .card .contentBx h2{
+font-size: 15px;
+color: #ffff;
+text-transform: uppercase;
+font-weight: 500;
+letter-spacing: 1px;
+}
+.container .card .contentBx p{
+font-size: 22px;
+text-transform: capitalize;
+font-weight: 500;
+letter-spacing: 1px;
+color: #ffffffe8;
+}
+/* STARS */
+.container .card .contentBx .stars ul  {
+display: flex;
+align-items: center;
+margin: 2px;
+}
+.container .card .contentBx .stars ul li svg{
+width: 15px;
+color: #ffbe00;
+}
+.container .card .contentBx .stars ul li:nth-child(5) svg{
+width: 15px;
+color: rgb(223, 223, 223);
+}
+/* SIZE */
+.container .card .contentBx .size h3, .container .card .contentBx .color h3{
+font-size: 15px;
+color: #dfdfdf;
+font-weight: normal;
+text-transform: uppercase;
+margin-top: 10px;
+}
+.container .card .contentBx .size span {
+width: 12px;
+height: 12px;
+border-radius: 7px;
+background-color: #dfdfdf;
+}
+.container .card .contentBx .size .sizes_ ul{
+display: flex;
+align-items: center;
+}
+.container .card .contentBx .size .sizes_ ul li.active{
+background-color: #ffbe00;
+}
+.container .card .contentBx .size .sizes_ ul li{
+font-size: 15px;
+width: 20px;
+height: 19px;
+border-radius: 3px;
+background-color: #e6e6e6;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 8.5px;
+}
+/* COLOR */
+.container .card .contentBx .color{
+display: flex;
+justify-content: space-between;
+}
+.container .card .contentBx .color .price{
+float: right;
+margin-top: 10px;
+}
+.container .card .contentBx .color .price h5{
+color: #dfdfdf;
+font-size: 17px;
+font-weight: normal;
+}
+.container .card .contentBx .color .colors_ ul{
+display: flex;
+align-items: center;
+}
+.container .card .contentBx .color .colors_ ul li{
+width: 15px;
+height: 15px;
+border-radius: 25px;
+margin: 6px;
+}
+.container .card .contentBx .color .colors_ ul li.active{
+background-color: #ffbe00;
+}
+.container .card .contentBx .color .colors_ ul li:nth-child(2){
+background-color: #e6e6e6;
+}
+.container .card .contentBx .color .colors_ ul li:nth-child(3){
+background-color: #0d7f7f;
+}
+/* BUY BUTTON */
+.container .card .contentBx .buy_btn{
+width: 100%;
+height: fit-content;
+background-color: #ffbe00;
+text-align: center;
+border-radius: 7px;
+padding: 7px;
+margin-top: 1rem;
+}
+.container .card .contentBx .buy_btn a {
+text-decoration: none;
+color: black;
+font-size: 18px;
+}
